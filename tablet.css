@@ -1,0 +1,205 @@
+@media (max-width: 769px) {
+    html {
+        font-size: 62.5%;
+    }
+
+
+    /* ------------------------header */
+    header {
+        width: 90%;
+        /* background: red; */
+    }
+
+    header h1 {
+        width: 20%;
+        margin-right: 2rem;
+    }
+
+    .gnb {
+        width: 40%;
+        left: 25%;
+    }
+
+    .gnb li {
+        margin-right: 1.5rem;
+    }
+
+    .gnb li a {
+        font-size: 1.4rem;
+    }
+
+    .search input {
+        width: 13rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+    }
+
+    .search i {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.6rem;
+    }
+
+
+
+
+    /* ----------------------------visual */
+    #visual {
+        height: 55rem;
+    }
+
+    #visual .visual_txt {
+        bottom: 10%;
+        left: 5%;
+        font-size: 2.5rem;
+    }
+
+    #visual .visual_txt a {
+        font-size: 1.4rem;
+    }
+
+
+    #visual .slideBtn {
+        bottom: 5%;
+    }
+
+    #visual .slideBtn a {
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-right: 1.3rem;
+    }
+
+
+
+    /* ---------------------------contents */
+    #contents>div {
+        padding: 10rem 0;
+    }
+
+    #contents .con1 {
+        padding: 10rem 0 5rem;
+    }
+
+    #contents .con2Wrap {
+        padding: 5rem 0 30rem;
+    }
+
+    #contents>div:nth-of-type(odd) {
+        width: 90%;
+    }
+
+    #contents>div:nth-of-type(even) {
+        width: 100%;
+    }
+
+    #contents>div:nth-of-type(even)>div {
+        width: 90%;
+    }
+
+    /* ----------------con2 */
+    .tab_box a {
+        font-size: 1.6rem;
+        padding: 1rem 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .con2>a {
+        float: right;
+    }
+
+    .con2 .txt_box {
+        float: left;
+    }
+
+    .con2 .tab_box {
+        width: 100%;
+        position: absolute;
+        top: auto;
+        bottom: 20%;
+        right: 0;
+    }
+
+    #contents>div:nth-of-type(even)>.con2 {
+        padding: 3rem 0 15rem 0;
+    }
+
+
+    /* -------------------------------------con3 */
+    .con3>div {
+        width: 100%;
+        margin-right: 0%;
+        box-shadow: 5px 5px 5px #555;
+        position: relative;
+    }
+
+    .con3>div {
+        margin-top: 5rem;
+    }
+
+    .con3>div:nth-of-type(1) {
+        margin-top: 0;
+    }
+
+
+    .con3>div:nth-of-type(even) {
+        margin-top: 5rem;
+    }
+
+    .con3>div:last-child {
+        margin-right: 0;
+    }
+
+    .con3 .pic {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .con3>div>div:nth-of-type(2) div {
+        margin-top: 15%;
+        margin-bottom: 1rem;
+        padding: 0 3rem;
+        font-weight: bold;
+        font-size: 3rem;
+        color: #444;
+    }
+    
+    .con3>div>div:nth-of-type(2) span {
+        font-size: 2rem;
+        color: #888;
+        font-style: italic;
+    }
+    
+
+    /* -------------------------------------con4 */
+    .con4>div {
+        width: 46%;
+        height: 250px;
+        margin-right: 4%;
+        margin-bottom: 5%;
+    }
+
+    .con4>div:nth-of-type(even) {
+        margin-right: 0;
+    }
+
+    .con4 h2 {
+        color: #fff;
+    }
+
+    .con5>div {
+        width: 100%;
+        margin: 0 0% 3rem 0;
+        /* border: 1px solid #000; */
+    }
+
+    .con5>div:nth-of-type(even) {
+        margin-right: 0;
+    }
+
+    .con5 .con5_txt h3 {
+        cursor: pointer;
+        padding-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+}

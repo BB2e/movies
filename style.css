@@ -1,0 +1,645 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border:  1px solid red; */
+}
+
+
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.after::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.after>div {
+    float: left;
+}
+
+/* -----------------------header */
+.headerWrap {
+    background: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    color: #fff;
+}
+
+.headerWrap.on {
+    background: #000;
+    color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(0%);
+}
+
+header {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    position: relative;
+}
+
+header h1 {
+    float: left;
+    width: 12%;
+}
+
+header h1 img {
+    width: 100%;
+}
+
+.gnb {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.gnb li {
+    float: left;
+    margin-right: 30px;
+}
+
+/* 왼쪽에서 오른쪽으로 그려지는 듯한 효과 */
+
+.gnb li a {
+    display: block;
+    padding: 10px;
+    /* color: #fff; */
+    position: relative;
+    transition: all 0.5s;
+}
+
+.gnb li a:hover {
+    color: #555;
+}
+
+.gnb li a::after {
+    content: "";
+    /* width: 100%; */
+    height: 3px;
+    background: #fc895b;
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    display: none;
+    border-radius: 25px;
+}
+
+.gnb li a:hover::after {
+    content: "";
+    /* width: 100%; */
+    height: 3px;
+    background: #fc895b;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+.gnb li a.active::after {
+    display: block;
+    /* width: 100%; */
+    right: 0;
+
+}
+
+.search {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.search input {
+    width: 230px;
+    height: 35px;
+    padding: 5px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search i {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+
+
+/* ------------------------------------visual */
+#visual {
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+#visual>li:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(images/slide/slide8.jpg) center;
+    background-size: cover;
+    z-index: 3;
+}
+
+#visual>li:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(images/slide/slide6.jpg) center;
+    background-size: cover;
+    z-index: 2;
+}
+
+#visual>li:nth-of-type(3) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(images/slide/slide2.jpg) center;
+    background-size: cover;
+    z-index: 1;
+}
+
+#visual .visual_txt {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    font-size: 40px;
+    color: #fff;
+}
+
+#visual .visual_txt a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fc895b;
+    color: #fff;
+    font-size: 20px;
+}
+
+#visual .visual_txt a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    /* border: 2px solid #160c60; */
+}
+
+#visual img {
+    width: 100%;
+}
+
+#visual .slideBtn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+#visual .slideBtn a {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    margin-right: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#visual a.on {
+    background: #aaa;
+}
+
+
+
+/* ---------------------------------------content */
+#contents>div {
+    padding: 150px 0;
+}
+
+#contents .con1 {
+    padding: 150px 0 100px;
+}
+
+#contents .con2Wrap {
+    padding: 100px 0 170px;
+}
+
+#contents>div:nth-of-type(odd) {
+    max-width: 1240px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+}
+
+#contents>div:nth-of-type(even) {
+    background: darkblue;
+    padding-right: 20px;
+    padding-left: 20px;
+    /* background: #160c60; */
+}
+
+#contents>div:nth-of-type(even)>div {
+    max-width: 1240px;
+    width: 100%;
+    /* width: 70%; */
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#contents h2 {
+    padding: 0px 0 30px;
+    font-size: 28px;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+/* -------------------------------------con1 */
+.sl {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.con1 .owl-item {
+    width: 223px;
+}
+
+.con1 h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 3px 0;
+    font-size: 18px;
+}
+
+.con1 p {
+    font-size: 14px;
+}
+
+.con1 .owl-carousel {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.con1 .owl-nav {
+    position: relative;
+    font-size: 50px;
+    top: -100px;
+}
+
+
+.con1 .owl-nav button:nth-of-type(1) span {
+    position: absolute;
+    top: -150%;
+    left: -5%;
+}
+
+.con1 .owl-nav button:nth-of-type(2) span {
+    position: absolute;
+    top: -150%;
+    right: -5%;
+}
+
+.con1 .owl-nav i {
+    color: #aaa;
+}
+
+.con1 .owl-nav i:hover {
+    color: #555;
+}
+
+/* -----------------------------con2 */
+#contents>div:nth-of-type(even)>.con2 {
+    color: #fff;
+    position: relative;
+    padding: 30px 0 70px 0;
+    border: none;
+}
+
+#contents .con2 h2 {
+    text-transform: capitalize;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+#contents .con2 h2 span {
+    color: #fc895b;
+}
+
+#contents .con2 p {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.con2 .txt_box a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    margin: 60px 0 0;
+}
+
+.con2 .txt_box a:hover {
+    background: #fff;
+    color: #160c60;
+}
+
+
+.con2 .txt_box {
+    /*width: 35%; */
+    padding: 0px 0 0;
+}
+
+.con2 .tab_box {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background: #555; */
+}
+
+.con2 .tab_Wrap a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 3px;
+    font-size: 19px;
+    margin: 0 5px;
+}
+
+.tab_box a:first-child {
+    margin-left: 0;
+}
+
+
+.con2 .tab_Wrap a:hover:before {
+    content: '';
+    width: 90%;
+    height: 3px;
+    background-color: #fc895b;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+
+.con2 .tab_Wrap a.on::before {
+    content: '';
+    width: 90%;
+    height: 3px;
+    background-color: #fc895b;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+
+
+
+.tab_box ul {
+    position: absolute;
+    width: 100%;
+    margin-top: 25px;
+
+}
+
+.tab_box ul li {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.tab_box ul li:last-child {
+    margin-right: 0;
+}
+
+.tab_box ul li img {
+    width: 100%;
+}
+
+.tab_box ul {
+    display: none;
+}
+
+.tab_box ul.on {
+    display: block;
+}
+
+
+
+/* ------------------------------con3 */
+.con3 {
+    position: relative;
+}
+
+/* .con3 h1 {
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50px;
+    color: #fc895b;
+    text-shadow: 3px 3px 3px #555;
+} */
+
+.con3>div {
+    width: 30%;
+    margin-right: 5%;
+    box-shadow: 5px 5px 5px #555;
+    position: relative;
+}
+
+.con3>div:nth-of-type(even) {
+    margin-top: 30px;
+}
+
+.con3>div:last-child {
+    margin-right: 0;
+}
+
+    /* 이벤트 포스터 hover 시에 보이는  */
+
+.con3>div>div:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    text-align: center;
+}
+
+.con3>div:hover>div:nth-of-type(2) {
+    display: block;
+}
+
+.con3>div>div:nth-of-type(2) div {
+    margin-top: 15%;
+    margin-bottom: 10px;
+    padding: 0 30px;
+    font-weight: bold;
+    font-size: 23px;
+    color: #444;
+}
+
+.con3>div>div:nth-of-type(2) span {
+    /* font-size: 20px; */
+    color: #888;
+    font-style: italic;
+}
+
+.con3 .pic {
+    width: 100%;
+    height: 200px;
+}
+
+.con3 .pic1 {
+    background: url(images/poster/oscar2.png) center;
+    background-size: cover;
+}
+
+
+.con3 .pic2 {
+    background: url(images/poster/golden\ globe.jpg) center;
+    background-size: cover;
+}
+
+.con3 .pic3 {
+    background: url(images/poster/venice2.jpg) center;
+    background-size: cover;
+}
+
+
+/* .con3 .pic4 {
+    background: url(images/poster/venice2.jpg) center;
+    background-size: cover;
+} */
+
+
+
+/* -------------------------------------con4 */
+.con4>div {
+    width: 23.5%;
+    height: 250px;
+    margin-right: 2%;
+}
+
+.con4>div:last-child {
+    margin-right: 0;
+}
+
+.con4 h2 {
+    color: #fff;
+}
+
+
+/* -------------------------------------con5 */
+.con5>div {
+    width: 49%;
+    margin: 0 2% 20px 0;
+    /* border: 1px solid #000; */
+}
+
+.con5>div:nth-of-type(even) {
+    margin-right: 0;
+}
+
+.con5 .img {
+    width: 30%;
+    /* background: aqua; */
+}
+
+.con5 .img img {
+    max-width: 100%;
+    /* width: 181px;
+    height: 120px; */
+}
+
+.con5 .con5_txt {
+    width: 70%;
+    padding: 0px 10px 0 20px;
+}
+
+.con5 .con5_txt h3 {
+    cursor: pointer;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.con5 .con5_txt p {
+    font-size: 14px;
+}
+
+.con5 .con5_txt h3:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------footer */
+.footerWrap {
+    background: #000;
+}
+
+footer {
+    max-width: 1240px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+
+footer .b_box {
+    width: 70%;
+}
+
+footer ul {
+    /* float: right; */
+    margin-bottom: 20px;
+}
+
+
+footer ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+footer select {
+    float: right;
+}
