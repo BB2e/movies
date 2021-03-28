@@ -161,7 +161,7 @@ header h1 img {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url(images/slide/slide8.jpg) center;
+    background: url(../images/slide/slide8.jpg) center;
     background-size: cover;
     z-index: 3;
 }
@@ -170,7 +170,7 @@ header h1 img {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url(images/slide/slide6.jpg) center;
+    background: url(../images/slide/slide6.jpg) center;
     background-size: cover;
     z-index: 2;
 }
@@ -179,7 +179,7 @@ header h1 img {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url(images/slide/slide2.jpg) center;
+    background: url(../images/slide/slide2.jpg) center;
     background-size: cover;
     z-index: 1;
 }
@@ -518,24 +518,24 @@ header h1 img {
 }
 
 .con3 .pic1 {
-    background: url(images/poster/oscar2.png) center;
+    background: url(../images/poster/oscar2.png) center;
     background-size: cover;
 }
 
 
 .con3 .pic2 {
-    background: url(images/poster/golden\ globe.jpg) center;
+    background: url(../images/poster/golden\ globe.jpg) center;
     background-size: cover;
 }
 
 .con3 .pic3 {
-    background: url(images/poster/venice2.jpg) center;
+    background: url(../images/poster/venice2.jpg) center;
     background-size: cover;
 }
 
 
 /* .con3 .pic4 {
-    background: url(images/poster/venice2.jpg) center;
+    background: url(../images/poster/venice2.jpg) center;
     background-size: cover;
 } */
 
