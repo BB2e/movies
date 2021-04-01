@@ -35,7 +35,7 @@ a {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 9;
+    z-index: 9999;
     color: #fff;
 }
 
@@ -453,17 +453,6 @@ header h1 img {
     position: relative;
 }
 
-/* .con3 h1 {
-    width: 100%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 50px;
-    color: #fc895b;
-    text-shadow: 3px 3px 3px #555;
-} */
 
 .con3>div {
     width: 30%;
@@ -609,7 +598,6 @@ footer {
     color: #fff;
     padding: 30px 20px;
 }
-
 
 footer .b_box {
     width: 70%;
